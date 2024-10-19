@@ -1,103 +1,176 @@
-body{
+body {
+    background-image: url(img/backgroundLogin.png);
+    background-size: cover; /* Faz a imagem cobrir toda a área, sem distorção */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-position: center center; /* Centraliza a imagem no fundo */
+    height: 100vh; /* A altura da página será igual à altura da janela de visualização */
+    margin: 0; /* Remove a margem padrão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
-    background-image:url(img/background_telalogin.png) ;
-    /* background-repeat: no-repeat; */
-
 }
 
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 16px;
     background-color: white;
     padding: 15px;
-    width: 400px;
+    padding-top: 10px;
+    width: 618px;
     margin: 15% auto;
-    height: 320px;
-    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.356);
-}
-
- .div_caixa_texto {
-    /*
-     margin: 1%;
-     display: flex;
-     align-items: center;
-     padding: 1px;
-     */
-     
-} 
-
-.input_text {
-    width: 80%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    box-sizing: border-box;
-    background-color: 	rgb(240,240,240);
-    margin: auto;
-    display: flex;
-    /* align-items: center; */
-    transform: translateY(-35px);
-    
+    box-shadow: 0px 7px 29px rgba(100, 100, 111, 0.2);
 
 }
-
-.input_pass {
-    width: 80%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    box-sizing: border-box;
-    background-color: 	rgb(240,240,240);
-    margin: auto;
-    display: flex;
-    transform: translateY(-22px); 
-}
-
-
 
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 55px;
+    line-height: 67px;
+    margin-bottom: 0;
 }
 
 .h1_login {
-    /* display: flex; */
-    margin: auto;
-    transform: translateY(-20px); 
-}
-
-.button {
+    margin-bottom: 0;
+    transform: translateY(-20px);
     margin-top: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 80%; 
-    margin: auto;
-    margin-bottom:30px;
-    padding: 7px;
-    background-color: #7f0a9c;
-    color: #fff;
-    border: none; 
-    border-radius: 7px;
-    font-size: 16px;
+    align-items: center;
+    padding: 0px;
     text-align: center;
-    font-weight: bold;
 
 }
+
+/* Estilo para o campo de Email ou Telefone */
+.div_caixa_texto.email {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 10px;
+    background: #F2F2F2;
+    border-radius: 10px;
+    width: 505.64px;
+    height: 54.62px;
+    margin: 15px auto;
+}
+
+.div_caixa_texto.email::before {
+    content: url('img/icone@.png'); /* Caminho para o ícone de email */
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.input_text {
+    width: 330px;
+    height: 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: none;
+    color: #5E5E5E;
+    border: none;
+    background: none;
+    flex-grow: 1;
+    outline: none;
+    text-decoration: none;
+}
+
+
+/* Estilo para o campo de Senha */
+.div_caixa_texto.senha {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 10px;
+    background: #F2F2F2;
+    border-radius: 10px;
+    width: 505.64px;
+    height: 54.62px;
+    margin: 9px auto;
+}
+
+.div_caixa_texto.senha::before {
+    content: url(img/lock.png); /* Caminho para o ícone de senha */
+    width: 23px;
+    height: 23px;
+    flex-shrink: 0;
+}
+
+.input_pass {
+    width: 330px;
+    height: 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: none;
+    color: #676767;
+    border: none;
+    background: none;
+    flex-grow: 1;
+    outline: none;
+    text-decoration: none;
+}
+
 
 .div_esquece_senha {
-    /* margin-top: 10px;
+    margin-top: 50px;
     margin-right: 65px;
-    margin-bottom: 20px; */
+    margin-bottom: 10px; 
     text-decoration: none;
-    /* margin: auto; */
-    /* margin-left: 30px; */
+    margin: auto; 
+    margin-left: 10px; 
     transform: translateX(40px);
-    
-    
+    width: 197.84px;
+    height: 100px;
+    position: relative;
+
 }
 
 .esqueceu_senha {
-    text-decoration: none;
-    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    color: #3C1C57;  
+      
 }
+
+.button {
+    display: flex; /* Habilita o uso do Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 10px 15px;
+    gap: 10px;
+    background: #F2F2F2;
+    border-radius: 15px;
+    width: 520px;
+    height: 54.62px;
+    margin: 20px auto;
+    position: relative;
+
+    border: none;
+    background: #8B3FCB;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.02), 0px 0px 0px 1px rgba(27, 31, 35, 0.15);
+    border-radius: 15px;
+    cursor: pointer; 
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 41px;
+    text-align: center;
+    color: #FFFFFF;
+    
+
+}
+    
