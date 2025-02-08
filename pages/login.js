@@ -14,7 +14,7 @@ document.getElementById("btnLogin").addEventListener("click", function () {
   if (usuario) {
     alert("Login bem-sucedido!");
     // Redirecionar para a página principal ou dashboard
-    // window.location.href = 'dashboard.html';
+    //window.location.href = 'home';
   } else {
     alert("Email ou senha incorretos.");
   }
